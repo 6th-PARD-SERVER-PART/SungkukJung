@@ -4,6 +4,8 @@
 `Map<String, String>`을 사용해 사용자 정보를 저장하고,  
 RESTful 방식으로 CRUD(Create, Read, Update, Delete)를 구현했습니다.  
 
+선차적 순서는 상광이 없고 각 사용자 마다 아이디(key)가 중복되지 않아야만 하는 반면 사용마다 이름을 같을 수 있으니 Key는 중복 불가능 Value는 중복가능한 HashMap을 사용했습니다.
+
 ## 요약
 
 | Method  | URL                 | 설명                 | Parameters                                            |
@@ -76,4 +78,5 @@ RESTful 방식으로 CRUD(Create, Read, Update, Delete)를 구현했습니다.
   "testId2": "Tester2"
 }
 ```
+
 
