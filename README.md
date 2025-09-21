@@ -1,0 +1,70 @@
+# UserInfoController
+
+간단한 Spring Boot REST API
+`Map<String, String>`을 사용해 사용자 정보를 저장하고,  
+RESTful 방식으로 CRUD(Create, Read, Update, Delete)를 구현했습니다.  
+
+## API 엔드포인트 요약
+
+| Method  | URL                 | 설명                 | Parameters                                            |
+|---------|---------------------|---------------------|-------------------------------------------------------|
+| GET     | `/users`            | 전체 사용자 조회        | 없음                                                   |
+| POST    | `/users`            | 새로운 사용자 추가       | RequestParam: `userId`, `userLegalName`               |
+| GET     | `/users/{userId}`   | 특정 사용자 조회        | PathVariable: `userId`                                |
+| PUT     | `/users/{userId}`   | 사용자 정보 수정        | PathVariable: `userId`, RequestParam: `userLegalName` |
+| DELETE  | `/users/{userId}`   | 사용자 삭제            | PathVariable: `userId`                                |
+
+
+## API 엔드포인트 설명
+
+기본 URL: `/users`
+
+### 1. 전체 사용자 조회
+- **GET** `/users`
+- **결과 예시**
+```json
+{}
+```
+- ***처음에는 등록된 사용자 정보가 없을겁니다.***
+  ***POST를 통해 새로운 사용자 추가후 아래와 같이 사용자 정보들이 나옵니다.***
+```json
+{
+  "testId1": "Tester1",
+  "testId2": "Tester2"
+}
+```
+
+### 2. 새로운 사용자 추가 
+- **POST** `/users?userId=testId1&userLegalName=Tester1`
+- **결과 예시**
+```json
+{
+  "testId1": "Tester1"
+}
+```
+
+### 3. 특정 사용자 조회 
+- **GET** `/users/testId1`
+- **결과 예시**
+```json
+{
+  "testId1": "Tester1"
+}
+```
+
+### 4. 사용자 정보 수정
+- **PUT** `/users/testId1?userLegalName=Tester2`
+- **결과 예시**
+```json
+{
+  "testId1": "Tester2"
+}
+```
+- ***userId를 통해 특정 사용자 정보를 가져오고 사용자의 아름(userLegalName)을 바꿀 수 있습니다***
+
+### 5. 사용자 삭제 
+- **DELETE** `/users/testId1`
+- **결과 예시**
+```json
+{}
+```
