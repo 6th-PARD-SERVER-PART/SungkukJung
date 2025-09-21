@@ -4,7 +4,7 @@
 `Map<String, String>`을 사용해 사용자 정보를 저장하고,  
 RESTful 방식으로 CRUD(Create, Read, Update, Delete)를 구현했습니다.  
 
-## API 엔드포인트 요약
+## 요약
 
 | Method  | URL                 | 설명                 | Parameters                                            |
 |---------|---------------------|---------------------|-------------------------------------------------------|
@@ -15,7 +15,7 @@ RESTful 방식으로 CRUD(Create, Read, Update, Delete)를 구현했습니다.
 | DELETE  | `/users/{userId}`   | 사용자 삭제            | PathVariable: `userId`                                |
 
 
-## API 엔드포인트 설명
+## 설명
 
 기본 URL: `/users`
 
@@ -68,3 +68,4 @@ RESTful 방식으로 CRUD(Create, Read, Update, Delete)를 구현했습니다.
 ```json
 {}
 ```
+
