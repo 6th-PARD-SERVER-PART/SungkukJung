@@ -27,6 +27,7 @@ RESTful 방식으로 CRUD(Create, Read, Update, Delete)를 구현했습니다.
 ```
 - ***처음에는 등록된 사용자 정보가 없을겁니다.***
   ***POST를 통해 새로운 사용자 추가후 아래와 같이 사용자 정보들이 나옵니다.***
+- **예시**
 ```json
 {
   "testId1": "Tester1",
@@ -67,5 +68,12 @@ RESTful 방식으로 CRUD(Create, Read, Update, Delete)를 구현했습니다.
 - **결과 예시**
 ```json
 {}
+```
+- ***사용자 정보가 여러개 있을시, GET을 통해 전체 사용자 정보를 검색할시 삭제된 사용자 정보가 없는 것을 확인할 수 있습니다.***
+- **예시**
+```json
+{
+  "testId2": "Tester2"
+}
 ```
 
