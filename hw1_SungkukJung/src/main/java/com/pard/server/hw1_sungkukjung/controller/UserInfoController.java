@@ -23,6 +23,7 @@ public class UserInfoController {
     // 에) /users?userId=testId1&userLegalName=Tester2
     @PostMapping
     public Map<String, String> addUser(@RequestParam String userId, @RequestParam String userLegalName) {
+        // put은 key와 value값을 입력합니다
         users.put(userId, userLegalName);
         return users;
     }
@@ -32,7 +33,7 @@ public class UserInfoController {
     @GetMapping("/{userId}")
     public Map<String, String> findUser(@PathVariable String userId) {
         Map<String, String> idFound = new HashMap<>();
-
+        // containsKey는 해당 key가 있을 시 결과값을 return합니다
         if(users.containsKey(userId)) {
             idFound.put(userId, users.get(userId));
         }
@@ -53,6 +54,7 @@ public class UserInfoController {
     // 예) /users/testId1
     @DeleteMapping("/{userId}")
     public Map<String, String> deleteUser(@PathVariable String userId) {
+        // remove 매소드는 map항목에서 특정한 아이템 (key, value)를 삭제합니다
         users.remove(userId);
         return users;
     }
