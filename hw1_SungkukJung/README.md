@@ -80,3 +80,6 @@ RESTful 방식으로 CRUD(Create, Read, Update, Delete)를 구현했습니다.
 ```
 
 
+## 친구 Controller 접속하기
+
+<img width="5092" height="3180" alt="이상현님 테스트" src="https://github.com/user-attachments/assets/83e0544f-2e3f-49cb-9471-db8dce658c79" />
