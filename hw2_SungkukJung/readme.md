@@ -141,7 +141,7 @@ Data Deleted
 
 ## OpenWeatherClient 설명
 
-`OpenWeatherClient`는 외부 OpenWeather API를 호출하는 컴포넌트입니다.
+`OpenWeatherClient`는 외부 OpenWeather API를 호출하는 컴포넌트
 
 ### WebClient 사용
 - Spring5의 비동기/반응형 HTTP 클라이언트
